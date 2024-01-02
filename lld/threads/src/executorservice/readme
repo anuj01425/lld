@@ -1,0 +1,12 @@
+Implementation of fixed size thread pool with argument being core-pool, queue size.
+
+1.Task -> Task that is to be executed. Will be pushed to the queue if core pool is full.
+2.My Thread -> Thread that will execute the task.
+3.Task Queue -> Blocking queue storing the tasks.
+4.Thread Pool Connector -> Will exposed the execute method. This will accept the task. If the threads is less than
+core pool size, it will create a new thread and execute the task. If the core pool size is full, it will push the task to the queue.
+Refrenece from
+https://github.com/vladmihaisavin/java-thread-pool-executor
+
+For java internal
+https://medium.com/codex/executorservice-internal-working-in-java-7b286882f54e
